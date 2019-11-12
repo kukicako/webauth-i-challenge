@@ -3,7 +3,6 @@ const bcrypt = require("bcryptjs");
 
 const Users = require("../users/users-model.js");
 
-const Users = require('../users/users-model.js');
 
 router.post("/register", (req, res) => {
   let user = req.body;
@@ -18,7 +17,6 @@ router.post("/register", (req, res) => {
     .catch(error => {
       res.status(500).json(error);
     });
-});
 });
 
 router.post("/login", (req, res) => {
@@ -37,7 +35,6 @@ router.post("/login", (req, res) => {
       }
     })
     .catch(error => {
-      console.log('login error', error);
       res.status(500).json(error);
     });
 });
